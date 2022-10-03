@@ -58,8 +58,8 @@ const TodoList = () => {
          <div className="card" key={todo.id}>
             <div className="card-body">
               <button type="button" className="btn btn-primary position-relative">
-                Days
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill fs-5 bg-danger">
+                Due
+                <span className="position-absolute top-0 mt-1 ms-5 date start-100 translate-middle badge rounded-pill bg-danger">
                   {todo.time}
                 </span>
               </button>
@@ -79,17 +79,29 @@ const TodoList = () => {
         position:relative;
         margin-top:50px;
         width:80%;
-        background-color: #f5f5f5;
+        
         display:flex;
         flex-wrap:wrap;
         padding: 20px;
        }
 
+       .date {
+        font-size:17px;
+       }
+
+       .bg {
+        background-color: #f5f5f5;
+       }
 
        .card  {
         position:relative;
         width: 350px;
         margin:10px;
+        box-shadow :1px 1px 20px gray;
+       }
+
+       .card:hover {
+        box-shadow: none;
        }
 
        .garbage {

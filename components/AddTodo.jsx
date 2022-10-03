@@ -32,9 +32,6 @@ const AddTodo = () => {
 
     setTitle("");
     setTime("");
-   
-
-   
   };
 
   return (
@@ -51,18 +48,18 @@ const AddTodo = () => {
         </label>
 
         <label className='text-center mt-5 ms-5'>
-          <span>Days</span>
-          <input type="number" 
-                placeholder='number'
+          <span>Due</span>
+          <input type="date" 
                 value={time}
           onChange={(e) => setTime(e.target.value)}
                 className='ms-3 px-2 py-1'  />
         </label>
 
         <button type="button" 
-                className="btn btn-primary ms-5 px-5"
+                className="btn btn-outline-primary ms-5 px-5"
                 onClick={() => handleTodoCreate()}
-                 disabled={title.length < 1 || time.length < 1 || isLoading}
+                disabled={title.length < 1 || time.length < 1 || isLoading}
+
                 >Add</button>
         
       </section>

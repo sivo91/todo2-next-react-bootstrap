@@ -23,8 +23,8 @@ const addTodo = async ({ userId, title, time, status }) => {
 
 const toggleTodoStatus = async ({ docId, status }) => {
   try {
-    const todoRef = doc(db, "todo", docId);
-    await updateDoc(todoRef, {
+    const data = doc(db, "todo", docId);
+    await updateDoc(data, {
       status,
     });
   } catch (err) {
@@ -35,8 +35,8 @@ const toggleTodoStatus = async ({ docId, status }) => {
 // delete item
 const deleteTodo = async (docId) => {
   try {
-    const todoRef = doc(db, "todo", docId);
-    await deleteDoc(todoRef);
+    const data = doc(db, "todo", docId);
+    await deleteDoc(data);
   } catch (err) {
     console.log(err);
   }

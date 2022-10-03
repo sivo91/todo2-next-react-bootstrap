@@ -50,7 +50,7 @@ return (
   {
     !isLoggedIn && (
       <button type="button" 
-              className="btn btn-login vstack mx-auto mt-5" 
+              className="btn btn-secondary vstack mx-auto mt-5" 
               onClick={() => handleAuth()}>
               Login with Google
       </button>
@@ -58,10 +58,6 @@ return (
   }
 
 <style jsx>{`
- .btn-login {
-  background-image: linear-gradient(to right,#64f5a1,#3ae0de,#e4f78f);
-  font-size:25px;
- }
 
  .logout {
   position:relative;
